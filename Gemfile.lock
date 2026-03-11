@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    curses (1.5.4)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  curses
+
+CHECKSUMS
+  curses (1.5.4) sha256=ccc8052d5162a969606dc3fd11bfa5ce6cc92a0daffa42c3dfc3300d05d4a400
+
+BUNDLED WITH
+  4.0.3
