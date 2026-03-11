@@ -24,7 +24,7 @@ Curses.noecho
 Curses.cbreak
 w = Curses::Window.new(5, 5, 0, 0)
 w.keypad(true)
-w.box("|", "-", "+")
+w.box("|", "-", players[current].symbol)
 y = 1
 w.setpos(y, 1)
 field.grid.each do |line|
@@ -85,6 +85,8 @@ loop do # this is the game loop
     end
   end
   current = (current == 0) ? 1 : 0
+  w.setpos(0,0)
+  w.box("|", "-", players[current].symbol)
   w.setpos(1, 1)
   w.refresh
 end
