@@ -4,12 +4,13 @@ require "./Grid.rb"
 require "./Player.rb"
 require "./Choice.rb"
 
-field = Grid.new(3)
+field_size = 3
+field = Grid.new(field_size)
 players = [Player.new("X"), Player.new("O")]
 current = 0 # index to select the current player
-min_rounds_to_win = field.grid_size * 2 - 1
+min_rounds_to_win = field_size * 2 - 1
 rounds_played = 0
-max_rounds = field.grid_size * field.grid_size
+max_rounds = field_size * field_size
 
 def win(winner)
   puts "#{winner} wins!"
@@ -22,7 +23,7 @@ end
 Curses.init_screen
 Curses.noecho
 Curses.cbreak
-w = Curses::Window.new(5, 5, 0, 0)
+w = Curses::Window.new(field_size + 2, field_size + 2, 0, 0)
 w.keypad(true)
 w.box("|", "-", players[current].symbol)
 y = 1
