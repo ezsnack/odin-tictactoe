@@ -86,7 +86,7 @@ loop do # this is the game loop
     end
   end
   current = (current == 0) ? 1 : 0
-  w.setpos(0,0)
+  w.setpos(0, 0)
   w.box("|", "-", players[current].symbol)
   w.setpos(1, 1)
   w.refresh
